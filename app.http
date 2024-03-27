@@ -1,0 +1,39 @@
+GET http://localhost:3000/
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "username": "vamsi",
+    "password": "90006080"
+}
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "nani",
+    "password": "123456789"
+}
+###
+
+POST http://localhost:3000/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbmkiLCJpZCI6MSwiaWF0IjoxNzExNTQyODQ5fQ.i6k__Oc5FM8Mcntyiez2AlOOEFF3Rv3CxljA9kjD59A
+Content-Type: application/json
+
+{
+    "username": "nani",
+    "password": "123456789"
+}
+###
+
+GET  http://localhost:3000/public-api
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbmkiLCJpZCI6MSwiaWF0IjoxNzExNTQyODQ5fQ.i6k__Oc5FM8Mcntyiez2AlOOEFF3Rv3CxljA9kjD59A
+###
+
+GET  http://localhost:3000/filtered-data/Animals?limit=3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hbmkiLCJpZCI6MSwiaWF0IjoxNzExNTQyODQ5fQ.i6k__Oc5FM8Mcntyiez2AlOOEFF3Rv3CxljA9kjD59A
+
